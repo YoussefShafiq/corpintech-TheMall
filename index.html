@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ATRA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav
+        class="max-w-6xl fixed lg:top-4 lg:rounded-lg rounded-b-lg right-0 left-0 z-50 mx-auto bg-white flex justify-between items-center shadow-lg border border-[#ff425555] h-20 overflow-hidden">
+        <div class="w-[120px] md:w-[160px] lg:w-[200px] ps-10">
+            <img src="./src/assets/logo.webp" alt="logo" title="logo" class="w-full">
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+            <!-- Social Icons -->
+            <div class="hidden md:flex items-center gap-2 lg:gap-3 px-2">
+                <i class="fa-brands fa-facebook-f text-sm lg:text-base"></i>
+                <i class="fa-brands fa-dribbble text-sm lg:text-base"></i>
+                <i class="fa-brands fa-twitter text-sm lg:text-base"></i>
+                <i class="fa-brands fa-instagram text-sm lg:text-base"></i>
+            </div>
+            <!-- Menu Icons -->
+            <div class="flex">
+                <div class="bg-[#f8f7f8] p-5 h-20 aspect-square flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass text-lg md:text-xl lg:text-2xl"></i>
+                </div>
+                <button id="navbar-modal-btn"
+                    class="bg-[#ff4255] text-white p-5 h-20 aspect-square flex items-center justify-center">
+                    <i class="fa-solid fa-bars text-lg md:text-xl lg:text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar modal -->
+    <div id="navbar-modal"
+        class="bg-[#201c25] fixed top-[-100vh] left-0 right-0 z-50 h-screen w-screen overflow-hidden overflow-y-auto flex justify-center items-center transition-all duration-500 ease-in-out">
+        <div class="container flex flex-col lg:flex-row gap-10">
+            <button id="close-navbar-modal-btn"
+                class="bg-[#ff4255] fixed top-4 right-4 text-white p-5 h-20 aspect-square flex items-center justify-center hidden">
+                <i class="fa-solid fa-xmark text-lg md:text-xl lg:text-2xl"></i>
+            </button>
+            <div class="w-2/3 lg:border-r border-r-gray-700">
+
+                <div id="accordion" class="divide-y divide-gray-200 w-3/4">
+                    <!-- HOME -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                HOME
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">HOME
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">HOME
+                                    2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABOUT -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                ABOUT
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">ABOUT
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">ABOUT
+                                    2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICES -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                SERVICES
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">SERVICES
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">SERVICES
+                                    2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PORTFOLIO -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                PORTFOLIO
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">PORTFOLIO
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">PORTFOLIO
+                                    2</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">PORTFOLIO
+                                    SINGLE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                CONTACT
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">CONTACT
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">CONTACT
+                                    2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOG -->
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-btn flex justify-between items-center w-full p-5 text-left font-medium text-gray-700 transition-colors duration-200">
+                            <span class="flex items-center text-white ">
+                                BLOG
+                            </span>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content max-h-0 overflow-hidden">
+                            <div class="pl-14 pr-5 pb-4 text-white/50 space-y-2">
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">BLOG
+                                    1</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">BLOG
+                                    2</a>
+                                <a href="#"
+                                    class="block py-2 px-4 rounded hover:text-white transition-colors duration-200">BLOG
+                                    SINGLE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-1/3">
+                <div class="lg:max-w-xl m-auto space-y-10 text-white">
+                    <div class=" flex">
+                        <div>
+                            <img src="./src/assets/logo-light.webp" alt="logo" title="logo"
+                                class="w-[120px] md:w-[160px] lg:w-[200px]">
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-white/50 font-bold capitalize">our address</h3>
+                        <p class="font-bold text-xl">123 Main St, Anytown, USA</p>
+                    </div>
+                    <div class="flex gap-10">
+                        <div class="space-y-3">
+                            <h3 class="text-white/50 font-bold capitalize">call us on</h3>
+                            <p class="font-bold text-xl">+123456789</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-white/50 font-bold capitalize">email us</h3>
+                            <p class="font-bold text-xl">contact@atra.com</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-dribbble text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-twitter text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="overflow-hidden">
+        <!-- hero section -->
+        <div class="flex flex-col lg:flex-row min-h-screen">
+            <!-- Left Section - Image -->
+            <div
+                class="w-full lg:w-1/2 bg-[#feb542] flex justify-end items-center p-10 lg:p-16 lg:pb-32 pt-20 lg:pt-16">
+                <div class="max-w-2xl w-fit">
+                    <img src="./src/assets/bg-19.webp" alt="hero" title="hero"
+                        class="w-[160%] max-w-[200%] h-auto rounded-lg">
+                </div>
+            </div>
+
+            <!-- Right Section - Content -->
+            <div class="w-full lg:w-1/2 bg-[#ff4255] flex justify-start items-center p-10 lg:p-16 lg:pb-32">
+                <div class="lg:max-w-xl w-full text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        We help to boost your digital application
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elit
+                    </p>
+                    <button
+                        class="bg-white text-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase">
+                        hire us
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- about atra agency section -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- left Section - Content -->
+            <div class="w-full lg:w-1/2 h-fit flex flex-col justify-center items-end ">
+                <div id="web-projects"
+                    class="lg:max-w-xl bg-[#201c25] w-full text-white p-10 text-lg space-y-4 lg:-translate-y-full">
+                    <h2 class="font-bold text-2xl">web projects</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </div>
+                <div id="about-agency"
+                    class="space-y-8 lg:mt-32 lg:max-w-xl w-full flex flex-col items-start lg:pe-14  relative lg:-translate-y-20 before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                    <h2 class="font-bold lg:text-6xl text-4xl capitalize px-8 pt-8">about atra agency</h2>
+                    <p class="px-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                    <img src="./src/assets/f83e62e5-f49c-45ca-90c3-d5e1ce9e9b79.png" alt="about atra agency"
+                        title="about atra agency" class="w-full">
+                </div>
+            </div>
+
+            <!-- right Section - Image -->
+            <div class="w-full lg:w-1/2 flex items-center">
+                <div id="web-projects-image" class="lg:max-w-2xl w-fit">
+                    <img src="./src/assets/bg-02-1536x864.webp" alt="about atra agency" title="about atra agency"
+                        class="lg:w-[50vw] lg:min-h-screen object-cover lg:max-w-none">
+                </div>
+            </div>
+        </div>
+
+        <!-- carousel section -->
+        <div class="bg-[#f8f7f8] py-10">
+            <div id="about-agency"
+                class=" max-w-6xl container relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-14 before:-left-36 before:z-10">
+                <h2 class="font-bold lg:text-6xl text-4xl capitalize p-8">We build unique digital experiences for brands
+                    with power.
+                </h2>
+            </div>
+
+            <!-- carousel -->
+            <div class="bg-[#f8f7f8] py-10 flex justify-end">
+                <div class="px-4 pe-0 py-8 w-4/5">
+                    <div class="carousel-wrapper relative overflow-hidden">
+                        <div class="carousel flex items-start transition-transform duration-500 ease-in-out h-fit">
+                            <!-- Card 1 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">App Development</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                                <div class="bg-white overflow-hidden h-full">
+                                    <div class="overflow-hidden aspect-square">
+                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
+                                            class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div class="p-6 flex flex-col justify-between flex-1">
+                                        <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <!-- <div class="flex justify-center mt-8 space-x-4">
+                        <button
+                            class="carousel-prev bg-[#ff4255] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#e53e4a] transition-colors">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button
+                            class="carousel-next bg-[#ff4255] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#e53e4a] transition-colors">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div> -->
+
+                    <!-- Indicators -->
+                    <!-- <div class="flex justify-center mt-4 space-x-2">
+                        <div class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer"></div>
+                        <div class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer"></div>
+                    </div> -->
+                </div>
+
+            </div>
+
+            <hr class="max-w-6xl container py-10">
+
+            <!-- check all services -->
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-20 max-w-6xl container p-8   ">
+                <h2 class="font-light text-3xl capitalize flex-1">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo dolor sit amet,
+                    consectetur
+                </h2>
+                <button
+                    class="text-white bg-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                    check all services
+                </button>
+            </div>
+        </div>
+
+        <!-- have an idea in your mind -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- left Section - Content -->
+            <div class="w-full lg:w-1/2 flex justify-end items-center bg-[#201c25] text-white p-8">
+                <div
+                    class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                    <h2 class="font-bold lg:text-6xl text-4xl capitalize">Have an idea in your mind?</h2>
+                    <p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elit </p>
+                    <button
+                        class="text-white bg-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        drop us mail
+                    </button>
+                </div>
+            </div>
+
+            <!-- right Section - Image -->
+            <div class="w-full lg:w-1/2 items-center h-full">
+                <div class="max-w-2xl w-fit">
+                    <img src="./src/assets/bg-04-1536x864.webp" alt="have an idea in your mind"
+                        title="have an idea in your mind"
+                        class="lg:w-[50vw] lg:min-h-[80vh] object-cover lg:max-w-none">
+                </div>
+            </div>
+        </div>
+
+        <!-- Herman, Schmidt and O'Kon -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- left Section - Image -->
+            <div class="w-full lg:w-1/2 items-center h-full">
+                <div class="max-w-2xl w-fit">
+                    <img src="./src/assets/bg-05.webp" alt="Herman, Schmidt and O'Kon" title="Herman, Schmidt and O'Kon"
+                        class="lg:w-[50vw] lg:min-h-[80vh] object-cover lg:max-w-none">
+                </div>
+            </div>
+
+            <!-- right Section - Content -->
+            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#ff4255] text-white p-8">
+                <div
+                    class="space-y-8 lg:max-w-xl w-full flex flex-col items-start lg:ps-32 ps-7 relative text-white before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#fff] before:top-8 before:-left-10 before:z-10">
+                    <h2 class="font-bold lg:text-6xl text-4xl capitalize">Herman, Schmidt and O'Kon</h2>
+                    <p class="text-lg">Provident asperiores rem. Ipsa laboriosam rerum culpa ex. Temporibus occaecati
+                        dolorem aut saepe.
+                        Perspiciatis enim consequatur impedit a doloremque optio ducimus debitis eum. Alias qui maiores
+                        dolores voluptatem non alias dicta. Beatae placeat a reiciendis omnis asperiores quibusdam
+                        dolor. </p>
+                    <button
+                        class=" text-[#ff4255] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        drop us mail
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- our selected work -->
+        <div class="flex flex-wrap">
+            <div class="w-1/2 md:w-1/4 aspect-square flex justify-center items-center">
+                <h2 class="lg:text-5xl text-2xl text-center leading-relaxed w-1/2 font-bold capitalize">our selected
+                    work</h2>
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/1.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/2.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/3.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/4.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/5.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square bg-black overflow-hidden">
+                <img src="./src/assets/6.png"
+                    class="w-full h-full object-cover hover:scale-105 hover:opacity-80 transition duration-300 cursor-pointer ">
+            </div>
+            <div class="w-1/2 md:w-1/4 aspect-square flex justify-center items-center">
+                <h2 class="lg:text-8xl text-6xl text-center leading-relaxed w-1/2 font-bold capitalize"><i
+                        class="fa-solid fa-arrow-right text-[#ff4255]"></i></h2>
+            </div>
+        </div>
+
+        <!-- Our awards and achievement -->
+        <div class="flex flex-col lg:flex-row min-h-screen">
+            <!-- left Section - Content -->
+            <div class="w-full lg:w-1/2 flex justify-end items-center py-16 lg:py-0">
+                <div class="lg:max-w-xl w-full px-4 sm:px-6 lg:px-8 py-12 lg:py-24 relative space-y-8">
+                    <div
+                        class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                        <h2 class="font-bold lg:text-6xl text-4xl capitalize">Our awards and achievement</h2>
+
+                    </div>
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 lg:w-[40vw]">
+                        <div class="p-4">
+                            <div
+                                class="flex flex-col h-full p-4 gap-3 bg-[#f8f7f8] hover:shadow-lg transition-shadow duration-300">
+                                <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png"
+                                    alt="Best App Design Award" class="w-full h-32 object-contain bg-white p-2"
+                                    loading="lazy">
+                                <h3 class="text-center font-bold text-lg p-2">Best App Design Award</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div
+                                class="flex flex-col h-full p-4 gap-3 bg-[#f8f7f8] hover:shadow-lg transition-shadow duration-300">
+                                <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png"
+                                    alt="Best App Design Award" class="w-full h-32 object-contain bg-white p-2"
+                                    loading="lazy">
+                                <h3 class="text-center font-bold text-lg p-2">Best App Design Award</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div
+                                class="flex flex-col h-full p-4 gap-3 bg-[#f8f7f8] hover:shadow-lg transition-shadow duration-300">
+                                <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png"
+                                    alt="Best App Design Award" class="w-full h-32 object-contain bg-white p-2"
+                                    loading="lazy">
+                                <h3 class="text-center font-bold text-lg p-2">Best App Design Award</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div
+                                class="flex flex-col h-full p-4 gap-3 bg-[#f8f7f8] hover:shadow-lg transition-shadow duration-300">
+                                <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png"
+                                    alt="Best App Design Award" class="w-full h-32 object-contain bg-white p-2"
+                                    loading="lazy">
+                                <h3 class="text-center font-bold text-lg p-2">Best App Design Award</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right Section - Image -->
+            <div class="w-full lg:w-1/2 h-[50vh] lg:h-auto">
+                <img src="./src/assets/bg-04-1536x864.webp" alt="Our Awards and Achievements"
+                    class="w-full h-full object-cover" loading="lazy">
+            </div>
+        </div>
+
+        <!-- testimonial -->
+        <div class="bg-[#f8f7f8]">
+            <div class="container flex flex-col items-center py-20 gap-5">
+                <div class="w-40 aspect-square rounded-full overflow-hidden">
+                    <img src="./src/assets/c80c2e77-3238-4942-99d4-12610e0b275e.png" alt="user prifile picture"
+                        title="user prifile picture" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col items-center">
+                    <h2 class="lg:text-2xl text-xl font-bold">Joey Sawayn</h2>
+                    <p class="text-black/50 lg:text-lg text-md font-bold">Forward Integration Specialist</p>
+                    <p class="lg:text-4xl text-2xl font-extralight text-center mt-10 lg:px-32 px-8">Delectus excepturi
+                        et harum. Et fugiat
+                        est
+                        sunt.
+                        Reprehenderit blanditiis impedit eos dolorum dolor qui non illo. Nisi excepturi laudantium aut
+                        ut
+                        nulla a. Eum sequi accusamus aperiam eaque rerum error non et. </p>
+                </div>
+            </div>
+            <hr class="container">
+            <div class="max-w-6xl container flex flex-wrap lg:flex-nowrap gap-3 py-20 justify-center ">
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+                <div class="w-[calc(50%-16px)] lg:w-fit">
+                    <img src="./src/assets/7ba6b74e-5f79-4bbd-8800-488177572f66.png" alt="Best App Design Award"
+                        class="w-full h-32 object-contain bg-white p-2" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 bg-[#201c25] lg:py-32 p-8 py-10 text-white">
+                <div class="lg:max-w-xl m-auto space-y-10">
+                    <div class="flex">
+                        <div>
+                            <img src="./src/assets/logo-light.webp" alt="logo" title="logo"
+                                class="w-[120px] md:w-[160px] lg:w-[200px]">
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-white/50 font-bold capitalize">our address</h3>
+                        <p class="font-bold text-xl">123 Main St, Anytown, USA</p>
+                    </div>
+                    <div class="flex gap-10">
+                        <div class="space-y-3">
+                            <h3 class="text-white/50 font-bold capitalize">call us on</h3>
+                            <p class="font-bold text-xl">+123456789</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-white/50 font-bold capitalize">email us</h3>
+                            <p class="font-bold text-xl">contact@atra.com</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-dribbble text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-twitter text-white"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#ff4255] text-white p-8 py-10 ">
+                <div
+                    class="space-y-8 lg:max-w-xl w-full flex flex-col items-start lg:ps-32 ps-7 relative text-white before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#fff] before:top-8 before:-left-10 before:z-10">
+                    <h2 class="font-bold lg:text-6xl text-4xl capitalize">Have an idea in your mind?</h2>
+                    <p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elit </p>
+                    <button
+                        class=" text-[#ff4255] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        drop us mail
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        // Define functions globally
+        function openNavbarModal() {
+            console.log('navbar modal opened');
+            const navbarModal = document.getElementById('navbar-modal');
+            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
+            navbarModal.classList.remove('top-[-100vh]');
+            navbarModal.classList.add('top-0');
+            closeNavbarModalBtn.classList.remove('hidden');
+        }
+
+        function closeNavbarModal() {
+            console.log('navbar modal closed');
+            const navbarModal = document.getElementById('navbar-modal');
+            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
+            navbarModal.classList.remove('top-0');
+            navbarModal.classList.add('top-[-100vh]');
+            closeNavbarModalBtn.classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Carousel functionality
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.card');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            const indicators = document.querySelectorAll('.indicator');
+
+            let currentPosition = 0;
+            let cardsPerPage = getCardsPerPage();
+            let cardCount = cards.length;
+            let pageCount = Math.ceil(cardCount / cardsPerPage);
+
+            // Get cards per page based on screen size
+            function getCardsPerPage() {
+                const width = window.innerWidth;
+                if (width < 768) return 1; // Mobile: 1 card
+                if (width < 1024) return 2; // Tablet: 2 cards
+                return 4; // Desktop: 4 cards
+            }
+
+            // Update indicators
+            function updateIndicators() {
+                const currentPage = Math.abs(currentPosition) / (100 / cardsPerPage);
+
+                indicators.forEach((indicator, index) => {
+                    if (index === currentPage) {
+                        indicator.classList.add('bg-[#ff4255]');
+                        indicator.classList.remove('bg-gray-300');
+                    } else {
+                        indicator.classList.remove('bg-[#ff4255]');
+                        indicator.classList.add('bg-gray-300');
+                    }
+                });
+            }
+
+            // Move carousel
+            function moveCarousel() {
+                const translateX = currentPosition * (100 / cardsPerPage);
+                carousel.style.transform = `translateX(${translateX}%)`;
+                updateIndicators();
+            }
+
+            // Next button event
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    if (currentPosition > -(pageCount - 1)) {
+                        currentPosition -= 1;
+                        moveCarousel();
+                    }
+                });
+            }
+
+            // Previous button event
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    if (currentPosition < 0) {
+                        currentPosition += 1;
+                        moveCarousel();
+                    }
+                });
+            }
+
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function () {
+                    currentPosition = -index;
+                    moveCarousel();
+                });
+            });
+
+            // Touch support for mobile
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+            let startTime = 0;
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+            if (carouselWrapper) {
+                // Prevent default touch behavior
+                carouselWrapper.addEventListener('touchstart', function (e) {
+                    startX = e.touches[0].clientX;
+                    startTime = Date.now();
+                    isDragging = true;
+                    carousel.style.transition = 'none';
+                }, { passive: false });
+
+                carouselWrapper.addEventListener('touchmove', function (e) {
+                    if (!isDragging) return;
+                    e.preventDefault();
+
+                    currentX = e.touches[0].clientX;
+                    const diff = startX - currentX;
+                    const translateX = (currentPosition * (100 / cardsPerPage)) - (diff / carouselWrapper.offsetWidth * 100);
+
+                    carousel.style.transform = `translateX(${translateX}%)`;
+                }, { passive: false });
+
+                carouselWrapper.addEventListener('touchend', function (e) {
+                    if (!isDragging) return;
+                    isDragging = false;
+
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+
+                    const diff = startX - currentX;
+                    const timeDiff = Date.now() - startTime;
+                    const velocity = Math.abs(diff) / timeDiff;
+                    const threshold = velocity > 0.5 ? 30 : 80;
+
+                    if (diff > threshold && currentPosition > -(pageCount - 1)) {
+                        currentPosition -= 1;
+                        moveCarousel();
+                    } else if (diff < -threshold && currentPosition < 0) {
+                        currentPosition += 1;
+                        moveCarousel();
+                    } else {
+                        moveCarousel();
+                    }
+                });
+
+                // Mouse drag support for desktop
+                carouselWrapper.addEventListener('mousedown', function (e) {
+                    startX = e.clientX;
+                    startTime = Date.now();
+                    isDragging = true;
+                    carousel.style.transition = 'none';
+                    carouselWrapper.style.cursor = 'grabbing';
+                    e.preventDefault();
+                });
+
+                document.addEventListener('mousemove', function (e) {
+                    if (!isDragging) return;
+
+                    currentX = e.clientX;
+                    const diff = startX - currentX;
+                    const translateX = (currentPosition * (100 / cardsPerPage)) - (diff / carouselWrapper.offsetWidth * 100);
+
+                    carousel.style.transform = `translateX(${translateX}%)`;
+                });
+
+                document.addEventListener('mouseup', function () {
+                    if (!isDragging) return;
+                    isDragging = false;
+
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                    carouselWrapper.style.cursor = 'grab';
+
+                    const diff = startX - currentX;
+                    const timeDiff = Date.now() - startTime;
+                    const velocity = Math.abs(diff) / timeDiff;
+                    const threshold = velocity > 0.5 ? 30 : 80;
+
+                    if (diff > threshold && currentPosition > -(pageCount - 1)) {
+                        currentPosition -= 1;
+                        moveCarousel();
+                    } else if (diff < -threshold && currentPosition < 0) {
+                        currentPosition += 1;
+                        moveCarousel();
+                    } else {
+                        moveCarousel();
+                    }
+                });
+            }
+
+            // Handle window resize
+            function handleResize() {
+                cardsPerPage = getCardsPerPage();
+                pageCount = Math.ceil(cardCount / cardsPerPage);
+                currentPosition = 0; // Reset to first slide
+                moveCarousel();
+            }
+
+            window.addEventListener('resize', handleResize);
+
+            // Initialize carousel
+            updateIndicators();
+
+            // Set grab cursor for desktop
+            if (carouselWrapper && window.matchMedia("(hover: hover)").matches) {
+                carouselWrapper.style.cursor = 'grab';
+            }
+
+            const accordionButtons = document.querySelectorAll('.accordion-btn');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.fa-chevron-down');
+
+                    // Toggle the active class on the icon
+                    icon.classList.toggle('rotate-180');
+
+                    // Close all other accordion items
+                    accordionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherContent = otherButton.nextElementSibling;
+                            const otherIcon = otherButton.querySelector('.fa-chevron-down');
+
+                            otherContent.style.maxHeight = null;
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Toggle the current accordion item
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Open the first accordion by default
+            if (accordionButtons.length > 0) {
+                accordionButtons[0].click();
+            }
+
+            console.log('DOM fully loaded');
+            // Get the web projects element and right section image container
+            const webProjects = document.getElementById('web-projects');
+            const rightSection = document.getElementById('web-projects-image');
+            const aboutAgency = document.getElementById('about-agency');
+
+            if (!webProjects) console.error('web-projects element not found!');
+            if (!rightSection) console.error('web-projects-image element not found!');
+            if (!aboutAgency) console.error('about-agency element not found!');
+
+            let currentTranslateClass = '';
+
+            function updateTranslateY() {
+                if (!webProjects || !rightSection) return;
+
+                // Remove previous translate class if it exists
+                if (currentTranslateClass) {
+                    rightSection.classList.remove(currentTranslateClass);
+                }
+
+                // Calculate the height and create the new translate class
+                const webProjectsHeight = webProjects.offsetHeight;
+                currentTranslateClass = `-translate-y-[${webProjectsHeight}px]`;
+
+                if (window.innerWidth >= 1024) {
+                    // Apply the new translate class
+                    rightSection.classList.add('transition-transform', 'duration-300');
+                    rightSection.classList.add(currentTranslateClass);
+                    aboutAgency.classList.add('transition-transform', 'duration-300');
+                    aboutAgency.classList.add(currentTranslateClass);
+                }
+            }
+
+            // Initial update
+            updateTranslateY();
+
+            // Update on window resize with debounce
+            let resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(updateTranslateY, 250);
+            });
+
+            // navbar modal - add event listeners
+            const navbarModalBtn = document.getElementById('navbar-modal-btn');
+            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
+
+            if (navbarModalBtn) {
+                navbarModalBtn.addEventListener('click', openNavbarModal);
+            }
+
+            if (closeNavbarModalBtn) {
+                closeNavbarModalBtn.addEventListener('click', closeNavbarModal);
+            }
+        }); 
+    </script>
+</body>
+
+</html>

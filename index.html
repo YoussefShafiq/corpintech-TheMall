@@ -9,15 +9,17 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
 </head>
 
 <body>
     <!-- navbar -->
     <nav
-        class="max-w-6xl fixed lg:top-4 lg:rounded-lg rounded-b-lg right-0 left-0 z-50 mx-auto bg-white flex justify-between items-center shadow-lg border border-[#ff425555] h-20 overflow-hidden">
-        <div class="w-[120px] md:w-[160px] lg:w-[200px] ps-10">
-            <img src="./src/assets/logo.webp" alt="logo" title="logo" class="w-full">
+        class="max-w-6xl fixed lg:top-4 lg:rounded-lg rounded-b-lg right-0 left-0 z-50 mx-auto bg-white flex justify-between items-center shadow-lg border border-[#956e4655] h-20 overflow-hidden">
+        <div class="h-full ps-10 flex items-center gap-3">
+            <img src="./src/assets/logo.png" alt="logo" title="logo" class="h-full p-3">
+            <h1 class="uppercase text-[#956e46] font-bold text-xl">marjani mall</h1>
         </div>
         <div class="flex items-center gap-2 md:gap-4">
             <!-- Social Icons -->
@@ -33,7 +35,7 @@
                     <i class="fa-solid fa-magnifying-glass text-lg md:text-xl lg:text-2xl"></i>
                 </div>
                 <button id="navbar-modal-btn"
-                    class="bg-[#ff4255] text-white p-5 h-20 aspect-square flex items-center justify-center">
+                    class="bg-[#956e46] text-white p-5 h-20 aspect-square flex items-center justify-center">
                     <i class="fa-solid fa-bars text-lg md:text-xl lg:text-2xl"></i>
                 </button>
             </div>
@@ -45,12 +47,12 @@
         class="bg-[#201c25] fixed top-[-100vh] left-0 right-0 z-50 h-screen w-screen overflow-hidden overflow-y-auto flex justify-center items-center transition-all duration-500 ease-in-out">
         <div class="container flex flex-col lg:flex-row gap-10">
             <button id="close-navbar-modal-btn"
-                class="bg-[#ff4255] fixed top-4 right-4 text-white p-5 h-20 aspect-square flex items-center justify-center hidden">
+                class="bg-[#956e46] fixed top-4 right-4 text-white p-5 lg:h-20 h-14 rounded-lg aspect-square flex items-center justify-center hidden">
                 <i class="fa-solid fa-xmark text-lg md:text-xl lg:text-2xl"></i>
             </button>
-            <div class="w-2/3 lg:border-r border-r-gray-700">
-
-                <div id="accordion" class="divide-y divide-gray-200 w-3/4">
+            <!-- accordion -->
+            <div class="w-full lg:w-2/3 lg:border-r border-r-gray-700 p-5 lg:p-0 mt-12 lg:mt-0">
+                <div id="accordion" class="divide-y divide-gray-200 w-full">
                     <!-- HOME -->
                     <div class="accordion-item">
                         <button
@@ -185,12 +187,14 @@
                 </div>
 
             </div>
-            <div class="w-1/3">
-                <div class="lg:max-w-xl m-auto space-y-10 text-white">
+
+            <!-- contact -->
+            <div class="lg:w-1/3">
+                <div class="lg:max-w-xl m-auto space-y-10 text-white p-8 lg:p-0">
                     <div class=" flex">
-                        <div>
-                            <img src="./src/assets/logo-light.webp" alt="logo" title="logo"
-                                class="w-[120px] md:w-[160px] lg:w-[200px]">
+                        <div class="h-20 flex items-center gap-3">
+                            <img src="./src/assets/logo.png" alt="logo" title="logo" class="h-full p-3">
+                            <h1 class="uppercase text-[#956e46] font-bold text-xl">marjani mall</h1>
                         </div>
                     </div>
                     <div class="space-y-3">
@@ -232,14 +236,15 @@
             <!-- Left Section - Image -->
             <div
                 class="w-full lg:w-1/2 bg-[#feb542] flex justify-end items-center p-10 lg:p-16 lg:pb-32 pt-20 lg:pt-16">
-                <div class="max-w-2xl w-fit">
+                <div class="max-w-2xl w-fit ">
                     <img src="./src/assets/bg-19.webp" alt="hero" title="hero"
                         class="w-[160%] max-w-[200%] h-auto rounded-lg">
                 </div>
             </div>
 
             <!-- Right Section - Content -->
-            <div class="w-full lg:w-1/2 bg-[#ff4255] flex justify-start items-center p-10 lg:p-16 lg:pb-32">
+            <div id="hero-right"
+                class="w-full lg:w-1/2 bg-[#956e46] flex justify-start items-center p-10 lg:p-16 lg:pb-32 ">
                 <div class="lg:max-w-xl w-full text-white">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                         We help to boost your digital application
@@ -248,7 +253,7 @@
                         Lorem ipsum dolor sit amet, consetetur sadipscing elit
                     </p>
                     <button
-                        class="bg-white text-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase">
+                        class="bg-white text-[#956e46] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase">
                         hire us
                     </button>
                 </div>
@@ -265,7 +270,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                 </div>
                 <div id="about-agency"
-                    class="space-y-8 lg:mt-32 lg:max-w-xl w-full flex flex-col items-start lg:pe-14  relative lg:-translate-y-20 before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                    class="space-y-8 lg:mt-32 lg:max-w-xl w-full flex flex-col items-start lg:pe-14  relative lg:-translate-y-20 before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-8 before:-left-36 before:z-10">
                     <h2 class="font-bold lg:text-6xl text-4xl capitalize px-8 pt-8">about atra agency</h2>
                     <p class="px-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                     <img src="./src/assets/f83e62e5-f49c-45ca-90c3-d5e1ce9e9b79.png" alt="about atra agency"
@@ -285,7 +290,7 @@
         <!-- carousel section -->
         <div class="bg-[#f8f7f8] py-10">
             <div id="about-agency"
-                class=" max-w-6xl container relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-14 before:-left-36 before:z-10">
+                class=" max-w-6xl container relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-14 before:-left-36 before:z-10">
                 <h2 class="font-bold lg:text-6xl text-4xl capitalize p-8">We build unique digital experiences for brands
                     with power.
                 </h2>
@@ -293,11 +298,14 @@
 
             <!-- carousel -->
             <div class="bg-[#f8f7f8] py-10 flex justify-end">
-                <div class="px-4 pe-0 py-8 w-4/5">
-                    <div class="carousel-wrapper relative overflow-hidden">
-                        <div class="carousel flex items-start transition-transform duration-500 ease-in-out h-fit">
+                <div class="px-4 lg:pe-0 py-8 lg:w-4/5 w-full">
+
+                    <!-- Swiper Container -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
                             <!-- Card 1 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -310,7 +318,7 @@
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -323,7 +331,7 @@
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -336,7 +344,7 @@
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -349,7 +357,7 @@
                             </div>
 
                             <!-- Card 5 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -362,7 +370,7 @@
                             </div>
 
                             <!-- Card 6 -->
-                            <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4">
+                            <div class="swiper-slide">
                                 <div class="bg-white overflow-hidden h-full">
                                     <div class="overflow-hidden aspect-square">
                                         <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
@@ -373,29 +381,19 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
+                        <!-- Navigation buttons -->
+                        <!-- <div class="swiper-button-next"></div> -->
+                        <!-- <div class="swiper-button-prev"></div> -->
+
+                        <!-- Pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
                     </div>
-
-                    <!-- Carousel Controls -->
-                    <!-- <div class="flex justify-center mt-8 space-x-4">
-                        <button
-                            class="carousel-prev bg-[#ff4255] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#e53e4a] transition-colors">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button
-                            class="carousel-next bg-[#ff4255] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#e53e4a] transition-colors">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div> -->
-
-                    <!-- Indicators -->
-                    <!-- <div class="flex justify-center mt-4 space-x-2">
-                        <div class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer"></div>
-                        <div class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer"></div>
-                    </div> -->
                 </div>
-
             </div>
+
 
             <hr class="max-w-6xl container py-10">
 
@@ -406,7 +404,7 @@
                     consectetur
                 </h2>
                 <button
-                    class="text-white bg-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                    class="text-white bg-[#956e46] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
                     check all services
                 </button>
             </div>
@@ -417,11 +415,11 @@
             <!-- left Section - Content -->
             <div class="w-full lg:w-1/2 flex justify-end items-center bg-[#201c25] text-white p-8">
                 <div
-                    class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                    class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-8 before:-left-36 before:z-10">
                     <h2 class="font-bold lg:text-6xl text-4xl capitalize">Have an idea in your mind?</h2>
                     <p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elit </p>
                     <button
-                        class="text-white bg-[#ff4255] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        class="text-white bg-[#956e46] hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 uppercase w-max">
                         drop us mail
                     </button>
                 </div>
@@ -448,7 +446,7 @@
             </div>
 
             <!-- right Section - Content -->
-            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#ff4255] text-white p-8">
+            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#956e46] text-white p-8">
                 <div
                     class="space-y-8 lg:max-w-xl w-full flex flex-col items-start lg:ps-32 ps-7 relative text-white before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#fff] before:top-8 before:-left-10 before:z-10">
                     <h2 class="font-bold lg:text-6xl text-4xl capitalize">Herman, Schmidt and O'Kon</h2>
@@ -458,7 +456,7 @@
                         dolores voluptatem non alias dicta. Beatae placeat a reiciendis omnis asperiores quibusdam
                         dolor. </p>
                     <button
-                        class=" text-[#ff4255] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        class=" text-[#956e46] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
                         drop us mail
                     </button>
                 </div>
@@ -497,7 +495,7 @@
             </div>
             <div class="w-1/2 md:w-1/4 aspect-square flex justify-center items-center">
                 <h2 class="lg:text-8xl text-6xl text-center leading-relaxed w-1/2 font-bold capitalize"><i
-                        class="fa-solid fa-arrow-right text-[#ff4255]"></i></h2>
+                        class="fa-solid fa-arrow-right text-[#956e46]"></i></h2>
             </div>
         </div>
 
@@ -507,7 +505,7 @@
             <div class="w-full lg:w-1/2 flex justify-end items-center py-16 lg:py-0">
                 <div class="lg:max-w-xl w-full px-4 sm:px-6 lg:px-8 py-12 lg:py-24 relative space-y-8">
                     <div
-                        class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#ff4255] before:top-8 before:-left-36 before:z-10">
+                        class="space-y-8 lg:max-w-xl w-full flex flex-col items-start pe-14 relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-8 before:-left-36 before:z-10">
                         <h2 class="font-bold lg:text-6xl text-4xl capitalize">Our awards and achievement</h2>
 
                     </div>
@@ -612,9 +610,9 @@
             <div class="lg:w-1/2 bg-[#201c25] lg:py-32 p-8 py-10 text-white">
                 <div class="lg:max-w-xl m-auto space-y-10">
                     <div class="flex">
-                        <div>
-                            <img src="./src/assets/logo-light.webp" alt="logo" title="logo"
-                                class="w-[120px] md:w-[160px] lg:w-[200px]">
+                        <div class="h-20 flex items-center gap-3">
+                            <img src="./src/assets/logo.png" alt="logo" title="logo" class="h-full p-3">
+                            <h1 class="uppercase text-[#956e46] font-bold text-xl">marjani mall</h1>
                         </div>
                     </div>
                     <div class="space-y-3">
@@ -647,13 +645,13 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#ff4255] text-white p-8 py-10 ">
+            <div class="w-full lg:w-1/2 flex justify-start items-center bg-[#956e46] text-white p-8 py-10 ">
                 <div
                     class="space-y-8 lg:max-w-xl w-full flex flex-col items-start lg:ps-32 ps-7 relative text-white before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#fff] before:top-8 before:-left-10 before:z-10">
                     <h2 class="font-bold lg:text-6xl text-4xl capitalize">Have an idea in your mind?</h2>
                     <p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elit </p>
                     <button
-                        class=" text-[#ff4255] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
+                        class=" text-[#956e46] bg-white hover:bg-black font-semibold py-3 px-8 transition duration-300 uppercase w-max">
                         drop us mail
                     </button>
                 </div>
@@ -663,6 +661,8 @@
     </main>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script>
         // Define functions globally
         function openNavbarModal() {
@@ -685,186 +685,27 @@
 
         document.addEventListener('DOMContentLoaded', function () {
 
-            // Carousel functionality
-            const carousel = document.querySelector('.carousel');
-            const cards = document.querySelectorAll('.card');
-            const prevBtn = document.querySelector('.carousel-prev');
-            const nextBtn = document.querySelector('.carousel-next');
-            const indicators = document.querySelectorAll('.indicator');
-
-            let currentPosition = 0;
-            let cardsPerPage = getCardsPerPage();
-            let cardCount = cards.length;
-            let pageCount = Math.ceil(cardCount / cardsPerPage);
-
-            // Get cards per page based on screen size
-            function getCardsPerPage() {
-                const width = window.innerWidth;
-                if (width < 768) return 1; // Mobile: 1 card
-                if (width < 1024) return 2; // Tablet: 2 cards
-                return 4; // Desktop: 4 cards
-            }
-
-            // Update indicators
-            function updateIndicators() {
-                const currentPage = Math.abs(currentPosition) / (100 / cardsPerPage);
-
-                indicators.forEach((indicator, index) => {
-                    if (index === currentPage) {
-                        indicator.classList.add('bg-[#ff4255]');
-                        indicator.classList.remove('bg-gray-300');
-                    } else {
-                        indicator.classList.remove('bg-[#ff4255]');
-                        indicator.classList.add('bg-gray-300');
-                    }
-                });
-            }
-
-            // Move carousel
-            function moveCarousel() {
-                const translateX = currentPosition * (100 / cardsPerPage);
-                carousel.style.transform = `translateX(${translateX}%)`;
-                updateIndicators();
-            }
-
-            // Next button event
-            if (nextBtn) {
-                nextBtn.addEventListener('click', function () {
-                    if (currentPosition > -(pageCount - 1)) {
-                        currentPosition -= 1;
-                        moveCarousel();
-                    }
-                });
-            }
-
-            // Previous button event
-            if (prevBtn) {
-                prevBtn.addEventListener('click', function () {
-                    if (currentPosition < 0) {
-                        currentPosition += 1;
-                        moveCarousel();
-                    }
-                });
-            }
-
-            // Indicator click events
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', function () {
-                    currentPosition = -index;
-                    moveCarousel();
-                });
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 5 }
+                }
             });
-
-            // Touch support for mobile
-            let startX = 0;
-            let currentX = 0;
-            let isDragging = false;
-            let startTime = 0;
-            const carouselWrapper = document.querySelector('.carousel-wrapper');
-
-            if (carouselWrapper) {
-                // Prevent default touch behavior
-                carouselWrapper.addEventListener('touchstart', function (e) {
-                    startX = e.touches[0].clientX;
-                    startTime = Date.now();
-                    isDragging = true;
-                    carousel.style.transition = 'none';
-                }, { passive: false });
-
-                carouselWrapper.addEventListener('touchmove', function (e) {
-                    if (!isDragging) return;
-                    e.preventDefault();
-
-                    currentX = e.touches[0].clientX;
-                    const diff = startX - currentX;
-                    const translateX = (currentPosition * (100 / cardsPerPage)) - (diff / carouselWrapper.offsetWidth * 100);
-
-                    carousel.style.transform = `translateX(${translateX}%)`;
-                }, { passive: false });
-
-                carouselWrapper.addEventListener('touchend', function (e) {
-                    if (!isDragging) return;
-                    isDragging = false;
-
-                    carousel.style.transition = 'transform 0.5s ease-in-out';
-
-                    const diff = startX - currentX;
-                    const timeDiff = Date.now() - startTime;
-                    const velocity = Math.abs(diff) / timeDiff;
-                    const threshold = velocity > 0.5 ? 30 : 80;
-
-                    if (diff > threshold && currentPosition > -(pageCount - 1)) {
-                        currentPosition -= 1;
-                        moveCarousel();
-                    } else if (diff < -threshold && currentPosition < 0) {
-                        currentPosition += 1;
-                        moveCarousel();
-                    } else {
-                        moveCarousel();
-                    }
-                });
-
-                // Mouse drag support for desktop
-                carouselWrapper.addEventListener('mousedown', function (e) {
-                    startX = e.clientX;
-                    startTime = Date.now();
-                    isDragging = true;
-                    carousel.style.transition = 'none';
-                    carouselWrapper.style.cursor = 'grabbing';
-                    e.preventDefault();
-                });
-
-                document.addEventListener('mousemove', function (e) {
-                    if (!isDragging) return;
-
-                    currentX = e.clientX;
-                    const diff = startX - currentX;
-                    const translateX = (currentPosition * (100 / cardsPerPage)) - (diff / carouselWrapper.offsetWidth * 100);
-
-                    carousel.style.transform = `translateX(${translateX}%)`;
-                });
-
-                document.addEventListener('mouseup', function () {
-                    if (!isDragging) return;
-                    isDragging = false;
-
-                    carousel.style.transition = 'transform 0.5s ease-in-out';
-                    carouselWrapper.style.cursor = 'grab';
-
-                    const diff = startX - currentX;
-                    const timeDiff = Date.now() - startTime;
-                    const velocity = Math.abs(diff) / timeDiff;
-                    const threshold = velocity > 0.5 ? 30 : 80;
-
-                    if (diff > threshold && currentPosition > -(pageCount - 1)) {
-                        currentPosition -= 1;
-                        moveCarousel();
-                    } else if (diff < -threshold && currentPosition < 0) {
-                        currentPosition += 1;
-                        moveCarousel();
-                    } else {
-                        moveCarousel();
-                    }
-                });
-            }
-
-            // Handle window resize
-            function handleResize() {
-                cardsPerPage = getCardsPerPage();
-                pageCount = Math.ceil(cardCount / cardsPerPage);
-                currentPosition = 0; // Reset to first slide
-                moveCarousel();
-            }
-
-            window.addEventListener('resize', handleResize);
-
-            // Initialize carousel
-            updateIndicators();
-
-            // Set grab cursor for desktop
-            if (carouselWrapper && window.matchMedia("(hover: hover)").matches) {
-                carouselWrapper.style.cursor = 'grab';
-            }
 
             const accordionButtons = document.querySelectorAll('.accordion-btn');
 

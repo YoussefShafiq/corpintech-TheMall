@@ -234,11 +234,9 @@
         <!-- hero section -->
         <div class="flex flex-col lg:flex-row lg:min-h-screen">
             <!-- Left Section - Image -->
-            <div
-                class="w-full lg:w-1/2 bg-[#feb542] flex justify-end items-center p-10 lg:p-16 lg:pb-32 pt-20 lg:pt-16">
-                <div class="max-w-2xl w-fit ">
-                    <img src="./src/assets/bg-19.webp" alt="hero" title="hero"
-                        class="w-[160%] max-w-[200%] h-auto rounded-lg">
+            <div class="w-full lg:w-1/2 flex justify-end items-center ">
+                <div class="w-full h-full">
+                    <img src="./src/assets/bg-19.webp" alt="hero" title="hero" class=" h-full object-cover">
                 </div>
             </div>
 
@@ -261,7 +259,7 @@
         </div>
 
         <!-- about marjani mall agency section -->
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row lg:items-start">
             <!-- left Section - Content -->
             <div class="w-full lg:w-1/2 h-fit flex flex-col justify-center items-end ">
                 <div id="web-projects"
@@ -270,7 +268,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                 </div>
                 <div id="about-agency"
-                    class="space-y-8 lg:mt-32 lg:max-w-xl w-full flex flex-col items-start lg:pe-14  relative lg:-translate-y-20 before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-8 before:-left-36 before:z-10">
+                    class=" space-y-8 lg:mt-32 lg:max-w-xl w-full flex flex-col items-start lg:pe-14  relative lg:-translate-y-20 before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-8 before:-left-36 before:z-10">
                     <h2 class="font-bold lg:text-6xl text-4xl capitalize px-8 pt-8">about marjani mall agency</h2>
                     <p class="px-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                     <img src="./src/assets/f83e62e5-f49c-45ca-90c3-d5e1ce9e9b79.png" alt="about marjani mall agency"
@@ -280,7 +278,7 @@
 
             <!-- right Section - Image -->
             <div class="w-full lg:w-1/2 flex items-center">
-                <div id="web-projects-image" class="lg:max-w-2xl w-fit">
+                <div id="web-projects-image" class="lg:max-w-2xl w-fit shadow-lg">
                     <img src="./src/assets/bg-02-1536x864.webp" alt="about marjani mall agency"
                         title="about marjani mall agency"
                         class="lg:w-[50vw] lg:min-h-screen object-cover lg:max-w-none">
@@ -290,8 +288,8 @@
 
         <!-- carousel section -->
         <div class="bg-[#f8f7f8] py-10">
-            <div id="about-agency"
-                class=" max-w-6xl container relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-14 before:-left-36 before:z-10">
+            <div
+                class="max-w-6xl container relative before:content-[''] before:absolute lg:before:w-28 before:w-14 before:h-2 before:bg-[#956e46] before:top-14 before:-left-36 before:z-10">
                 <h2 class="font-bold lg:text-6xl text-4xl capitalize p-8">We build unique digital experiences for brands
                     with power.
                 </h2>
@@ -303,85 +301,9 @@
 
                     <!-- Swiper Container -->
                     <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
+                        <div id="carousel-wrapper" class="swiper-wrapper">
 
-                            <!-- Card 1 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">Web Development</h3>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Card 2 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">App Development</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 3 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 4 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 5 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 6 -->
-                            <div class="swiper-slide">
-                                <div class="bg-white overflow-hidden h-full">
-                                    <div class="overflow-hidden aspect-square">
-                                        <img src="./src/assets/3e2820ad-46f8-4e26-b456-83c9cf339fde.png"
-                                            class="w-full h-full object-cover" alt="">
-                                    </div>
-                                    <div class="p-6 flex flex-col justify-between flex-1">
-                                        <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -662,143 +584,11 @@
     </main>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        // Define functions globally
-        function openNavbarModal() {
-            console.log('navbar modal opened');
-            const navbarModal = document.getElementById('navbar-modal');
-            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
-            navbarModal.classList.remove('top-[-100vh]');
-            navbarModal.classList.add('top-0');
-            closeNavbarModalBtn.classList.remove('hidden');
-        }
 
-        function closeNavbarModal() {
-            console.log('navbar modal closed');
-            const navbarModal = document.getElementById('navbar-modal');
-            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
-            navbarModal.classList.remove('top-0');
-            navbarModal.classList.add('top-[-100vh]');
-            closeNavbarModalBtn.classList.add('hidden');
-        }
 
-        document.addEventListener('DOMContentLoaded', function () {
-
-            const swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev"
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true
-                },
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false
-                },
-                breakpoints: {
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 5 }
-                }
-            });
-
-            const accordionButtons = document.querySelectorAll('.accordion-btn');
-
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.fa-chevron-down');
-
-                    // Toggle the active class on the icon
-                    icon.classList.toggle('rotate-180');
-
-                    // Close all other accordion items
-                    accordionButtons.forEach(otherButton => {
-                        if (otherButton !== button) {
-                            const otherContent = otherButton.nextElementSibling;
-                            const otherIcon = otherButton.querySelector('.fa-chevron-down');
-
-                            otherContent.style.maxHeight = null;
-                            otherIcon.classList.remove('rotate-180');
-                        }
-                    });
-
-                    // Toggle the current accordion item
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                });
-            });
-
-            // Open the first accordion by default
-            if (accordionButtons.length > 0) {
-                accordionButtons[0].click();
-            }
-
-            console.log('DOM fully loaded');
-            // Get the web projects element and right section image container
-            const webProjects = document.getElementById('web-projects');
-            const rightSection = document.getElementById('web-projects-image');
-            const aboutAgency = document.getElementById('about-agency');
-
-            if (!webProjects) console.error('web-projects element not found!');
-            if (!rightSection) console.error('web-projects-image element not found!');
-            if (!aboutAgency) console.error('about-agency element not found!');
-
-            let currentTranslateClass = '';
-
-            function updateTranslateY() {
-                if (!webProjects || !rightSection) return;
-
-                // Remove previous translate class if it exists
-                if (currentTranslateClass) {
-                    rightSection.classList.remove(currentTranslateClass);
-                }
-
-                // Calculate the height and create the new translate class
-                const webProjectsHeight = webProjects.offsetHeight;
-                currentTranslateClass = `-translate-y-[${webProjectsHeight}px]`;
-
-                if (window.innerWidth >= 1024) {
-                    // Apply the new translate class
-                    rightSection.classList.add('transition-transform', 'duration-300');
-                    rightSection.classList.add(currentTranslateClass);
-                    aboutAgency.classList.add('transition-transform', 'duration-300');
-                    aboutAgency.classList.add(currentTranslateClass);
-                }
-            }
-
-            // Initial update
-            updateTranslateY();
-
-            // Update on window resize with debounce
-            let resizeTimer;
-            window.addEventListener('resize', function () {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(updateTranslateY, 250);
-            });
-
-            // navbar modal - add event listeners
-            const navbarModalBtn = document.getElementById('navbar-modal-btn');
-            const closeNavbarModalBtn = document.getElementById('close-navbar-modal-btn');
-
-            if (navbarModalBtn) {
-                navbarModalBtn.addEventListener('click', openNavbarModal);
-            }
-
-            if (closeNavbarModalBtn) {
-                closeNavbarModalBtn.addEventListener('click', closeNavbarModal);
-            }
-        }); 
-    </script>
 </body>
 
 </html>

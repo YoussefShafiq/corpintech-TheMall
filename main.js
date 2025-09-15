@@ -1,4 +1,4 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js';
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.mjs";
 
 // Define functions globally
 function openNavbarModal() {
